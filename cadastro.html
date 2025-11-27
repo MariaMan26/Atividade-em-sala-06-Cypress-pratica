@@ -83,7 +83,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" >
+                <input type="text" id="email" > <!-- Se for tipo email o pop-up gerado pelo html impede a execução da função validarEmail -->
             </div>
             <div class="form-group">
                 <label for="usuario">Usuário:</label>
@@ -154,8 +154,6 @@
             mensagemDiv.classList.add('sucesso');
             mensagemDiv.textContent = 'Cadastro realizado com sucesso!';
             
-            // Opcional: Limpar o formulário após sucesso (descomentar se quiser)
-            // document.getElementById('cadastroForm').reset();
         });
     </script>
 </body>
