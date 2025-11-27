@@ -27,28 +27,6 @@ describe('Validação página de cadastro', () => {
         cy.get('#btnCadastrar').should('be.visible').and('contain', 'Cadastrar')
     })
 
-    it('Validar elementos visuais estáticos e itens do form', () => {
-        //Valida título da págine
-        cy.title().should('eq', 'Formulário de Cadastro Simples')
-
-        //Valida título da página de cadastro
-        cy.get('.container h2').should('be.visible').and('contain', 'Cadastro de Usuário')
-
-        //Valida elementos principais do form
-        cy.get('.form-group, #btnCadastrar').as('formcadastro')
-        cy.get('@formcadastro')
-            .should('be.visible') // Deve estar visível
-            .and('have.value', '') // Deve estar vazio inicialmente
-            .and('not.be.disabled') // Não deve estar desabilitado
-
-        //Valida nome de cada input/botão do form
-        cy.get('label[for="nome"]').should('contain', 'Nome:')
-        cy.get('label[for="email"]').should('contain', 'Email:')
-        cy.get('label[for="usuario"]').should('contain', 'Usuário:')
-        cy.get('label[for="senha"]').should('contain', 'Senha (mín. 8 dígitos):')
-        cy.get('label[for="confirmaSenha"]').should('contain', 'Confirmar Senha:')
-        cy.get('#btnCadastrar').should('be.visible').and('contain', 'Cadastrar')
-    })
 
     //TESTES DO JAVA SCRIPT
 
